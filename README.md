@@ -41,6 +41,7 @@
 
 <div align="center">
 <img src="./assets/github-domain.png" width="60%"/>
+
 <sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
 
