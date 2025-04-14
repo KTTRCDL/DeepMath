@@ -82,6 +82,8 @@ We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` 
 ##### Environment Preparation
 
 ```shell
+git clone https://github.com/zwhe99/DeepMath.git && cd DeepMath
+
 conda create -y -n deepmath python=3.12.2 && conda activate deepmath
 pip3 install ray[default]
 pip3 install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu124
