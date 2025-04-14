@@ -55,6 +55,7 @@
 
 <div align="center">
 <img src="./assets/github-data-sample.png" width="90%"/>
+
 <sub>An example data sample from the DeepMath=103K</sub>
 </div>
 
