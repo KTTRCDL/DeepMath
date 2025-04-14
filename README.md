@@ -53,6 +53,7 @@
 **5. Rich Data Format**: Each sample in `DeepMath-103K` is structured with rich information to support various research applications:
 
 <div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
+
 <sub>An example data sample from DeepMath-103K.</sub> </div>
 
 - **Question**: The mathematical problem statement.
