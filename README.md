@@ -31,7 +31,7 @@
 
 ## 📖 Overview
 
-`DeepMath-103K` is meticulously curated to push the boundaries of mathematical reasoning in language models. Key features include:
+**`DeepMath-103K`** is meticulously curated to push the boundaries of mathematical reasoning in language models. Key features include:
 
 **1. Challenging Problems**: DeepMath-103K has a strong focus on difficult mathematical problems (primarily Levels 5-9), significantly raising the complexity bar compared to many existing open datasets.
 
