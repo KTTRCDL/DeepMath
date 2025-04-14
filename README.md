@@ -33,6 +33,7 @@
 
 <div align="center">
 <img src="./assets/github-difficulty.png" width="90%"/>
+
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
 
@@ -40,5 +41,6 @@
 
 <div align="center">
 <img src="./assets/github-domain.png" width="70%"/>
+
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
