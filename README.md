@@ -48,7 +48,7 @@
 
 <div align="center"> <img src="./assets/github-contamination-case.png" width="80%"/>
 
-<sub>A data sample from DeepMath-103K.</sub> </div>
+<sub>Detected contamination examples. Subtle conceptual overlaps can also be identified.</sub> </div>
 
 **5. Rich Data Format**: Each sample in `DeepMath-103K` is structured with rich information to support various research applications:
 
