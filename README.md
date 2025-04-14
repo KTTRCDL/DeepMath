@@ -30,7 +30,7 @@
 ## 📖 Overview
 
 <div align="center">
-<img src="./assets/github-difficulty.png" width="60%"/>
+<img src="./assets/github-difficulty.png" width="80%"/>
 
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
