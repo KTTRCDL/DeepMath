@@ -36,7 +36,6 @@
 **1. Challenging Problems**: DeepMath-103K has a strong focus on difficult mathematical problems (primarily Levels 5-9), significantly raising the complexity bar compared to many existing open datasets.
 
 <div align="center"> <img src="./assets/github-difficulty.png" width="90%"/>
-
 <sub>Difficulty distribution comparison.</sub> </div>
 
 **2. Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
@@ -49,7 +48,7 @@
 
 <div align="center"> <img src="./assets/github-contamination-case.png" width="80%"/>
 
-<sub>An example data sample from DeepMath-103K.</sub> </div>
+<sub>A data sample from DeepMath-103K.</sub> </div>
 
 **5. Rich Data Format**: Each sample in `DeepMath-103K` is structured with rich information to support various research applications:
 
