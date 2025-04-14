@@ -29,9 +29,11 @@
 
 ## 📖 Overview
 
+
+
 <div align="center">
 <img src="./assets/github-difficulty.png" width="90%"/>
-
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
 
+DeepMath-103K is distinguished by its high concentration of challenging mathematical problems, significantly surpassing the difficulty distribution prevalent in existing open datasets.
