@@ -651,5 +651,9 @@ def eval(
             pass_prob_avg = sum(pass_prob_lst) / len(pass_prob_lst)
             f.write(f"Overall: {pass_prob_avg * 100:.1f}\n\n")
 
+    # print the result file
+    with open(result_file, "r") as f:
+        print(f.read())
+
 if __name__ == "__main__":
     fire.Fire(eval)
