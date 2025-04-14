@@ -37,10 +37,11 @@
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
 
-**Challenging**: DeepMath-103K is distinguished by its high concentration of challenging mathematical problems, significantly surpassing the difficulty distribution prevalent in existing open datasets.
+**Challenging**: DeepMath-103K features a high concentration of difficult mathematical problems (Levels 5-9), significantly exceeding the complexity found in typical open datasets.
 
 <div align="center">
 <img src="./assets/github-domain.png" width="70%"/>
-
-<sub>Difficulty distribution of open datasets.</sub>
+<sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
+
+**Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
