@@ -79,7 +79,7 @@ We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` 
 
 ## 🎯Quick Start
 
-##### Environment Preparation
+#### Environment Preparation
 
 ```shell
 git clone --recurse-submodules https://github.com/zwhe99/DeepMath.git && cd DeepMath
@@ -93,3 +93,6 @@ pip3 install math-verify[antlr4_11_0]==0.7.0 fire deepspeed tensorboardX prettyt
 pip3 install -e verl
 ```
 
+
+
+#### Evaluation
