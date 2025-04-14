@@ -37,7 +37,7 @@
 
 <div align="center"> <img src="./assets/github-difficulty.png" width="90%"/>
 
-<sub>Difficulty distribution comparison (details in paper).</sub> </div>
+<sub>Difficulty distribution comparison.</sub> </div>
 
 **2. Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
 
