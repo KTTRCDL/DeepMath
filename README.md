@@ -11,7 +11,6 @@
 <br>
 
 <div align="center">
-
 [![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/Skywork/Skywork-OR1-RL-Data)
 [![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zwhe99/DeepMath)
 [![GitHub Stars](https://img.shields.io/github/stars/zwhe99/DeepMath?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=000000)](https://github.com/zwhe99/DeepMath)
@@ -62,3 +61,13 @@
 - **Difficulty**: A numerical score for difficulty-aware training or analysis.
 - **Topic**: Hierarchical classification for topic-specific applications.
 - **R1 Solutions**: Three distinct reasoning paths from DeepSeek-R1, valuable for supervised fine-tuning (SFT) or knowledge distillation.
+
+
+## Main Results
+
+|          Model           | MATH 500 | AMC23 | Miverva Math | Olympiad Bench | AIME24 | AIME25 |
+| :----------------------: | :------: | :---: | :----------: | :------------: | :----: | :----: |
+|     Qwen2.5-7B-Base      |   54.8   | 35.3  |     16.2     |      27.8      |  7.7   |  5.4   |
+|  Open-Reasoner-Zero-7B   |   81.8   | 58.9  |     38.4     |      47.9      |  15.6  |  14.4  |
+| Qwen-2.5-7B-SimpleRL-Zoo |   77.0   | 55.8  |     41.2     |      41.0      |  15.6  |  8.7   |
+|     DeepMath-Zero-7B     |   85.5   | 64.7  |     45.3     |      xx.x      |  20.4  |  17.5  |
