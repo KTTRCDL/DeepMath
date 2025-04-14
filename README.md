@@ -40,7 +40,7 @@
 **Challenging**: DeepMath-103K features a high concentration of difficult mathematical problems (Levels 5-9), significantly exceeding the complexity found in typical open datasets.
 
 <div align="center">
-<img src="./assets/github-domain.png" width="70%"/>
+<img src="./assets/github-domain.png" width="60%"/>
 <sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
 
