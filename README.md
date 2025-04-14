@@ -73,7 +73,7 @@ We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` 
 |     Qwen2.5-7B-Base      |   54.8   |   35.3   |     16.2     |      27.8      |   7.7    |   5.4    |
 |  Open-Reasoner-Zero-7B   |   81.8   |   58.9   |     38.4     |      47.9      |   15.6   |   14.4   |
 | Qwen-2.5-7B-SimpleRL-Zoo |   77.0   |   55.8   |     41.2     |      41.0      |   15.6   |   8.7    |
-|     DeepMath-Zero-7B     | **85.5** | **64.7** |   **45.3**   |    **xx.x**    | **20.4** | **17.5** |
+|     DeepMath-Zero-7B     | **85.5** | **64.7** |   **45.3**   |    **51.0**    | **20.4** | **17.5** |
 
 
 
