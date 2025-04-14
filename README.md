@@ -29,15 +29,14 @@
 
 ## 📖 Overview
 
-
+**Challenging**: DeepMath-103K features a high concentration of difficult mathematical problems (Levels 5-9), significantly exceeding the complexity found in typical open datasets.
 
 <div align="center">
 <img src="./assets/github-difficulty.png" width="90%"/>
-
 <sub>Difficulty distribution of open datasets.</sub>
 </div>
 
-**Challenging**: DeepMath-103K features a high concentration of difficult mathematical problems (Levels 5-9), significantly exceeding the complexity found in typical open datasets.
+**Broad Topical Diversity**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
 
 <div align="center">
 <img src="./assets/github-domain.png" width="50%"/>
@@ -45,7 +44,7 @@
 <sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
 
-**Broad Topical Diversity**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
+**Data Sample**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
 
 <div align="center">
 <img src="./assets/github-data-sample.png" width="90%"/>
@@ -53,4 +52,3 @@
 <sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
 
-**Data Sample**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
