@@ -25,7 +25,7 @@
   - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
   - 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
   - 📝 Paper detailing data curation: [`arXiv:xxxx.xxxxx`](https://www.google.com/search?q=[https://arxiv.org/abs/xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx))
-  - *(Coming Soon)*: Model weights trained on DeepMath.
+  - *(Coming Soon)*: Model weights trained on DeepMath-103K.
 
 
 
