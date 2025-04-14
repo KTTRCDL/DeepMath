@@ -82,7 +82,7 @@ We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` 
 ##### Environment Preparation
 
 ```shell
-git clone https://github.com/zwhe99/DeepMath.git && cd DeepMath
+git clone --recurse-submodules https://github.com/zwhe99/DeepMath.git && cd DeepMath
 
 conda create -y -n deepmath python=3.12.2 && conda activate deepmath
 pip3 install ray[default]
