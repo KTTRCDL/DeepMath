@@ -39,7 +39,7 @@
 
 <sub>Difficulty distribution comparison (details in paper).</sub> </div>
 
-**2. Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive model exposure.
+**2. Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
 
 <div align="center"> <img src="./assets/github-domain.png" width="50%"/>
 
@@ -56,5 +56,4 @@
 - **R1 Solutions**: Three distinct reasoning paths from DeepSeek-R1, valuable for supervised fine-tuning (SFT) or knowledge distillation.
 
 <div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
-
 <sub>An example data sample from DeepMath-103K.</sub> </div>
