@@ -51,7 +51,7 @@
 
 - **Question**: The mathematical problem statement.
 - **Final Answer**: A reliably verifiable final answer, enabling robust rule-based reward functions for RL.
-- **Difficulty**: A numerical score (Levels 3-10, concentrated ge5) for difficulty-aware training or analysis. *(Clarified range)*
+- **Difficulty**: A numerical score for difficulty-aware training or analysis.
 - **Topic**: Hierarchical classification for topic-specific applications.
 - **R1 Solutions**: Three distinct reasoning paths from DeepSeek-R1, valuable for supervised fine-tuning (SFT) or knowledge distillation.
 
