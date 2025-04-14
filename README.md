@@ -49,11 +49,11 @@
 
 **5. Rich Data Format**: Each sample in `DeepMath-103K` is structured with rich information to support various research applications:
 
+<div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
+<sub>An example data sample from DeepMath-103K.</sub> </div>
+
 - **Question**: The mathematical problem statement.
 - **Final Answer**: A reliably verifiable final answer, enabling robust rule-based reward functions for RL.
 - **Difficulty**: A numerical score for difficulty-aware training or analysis.
 - **Topic**: Hierarchical classification for topic-specific applications.
 - **R1 Solutions**: Three distinct reasoning paths from DeepSeek-R1, valuable for supervised fine-tuning (SFT) or knowledge distillation.
-
-<div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
-<sub>An example data sample from DeepMath-103K.</sub> </div>
