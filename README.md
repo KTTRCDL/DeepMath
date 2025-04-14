@@ -45,4 +45,12 @@
 <sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
 </div>
 
-**Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
+**Broad Topical Diversity**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
+
+<div align="center">
+<img src="./assets/github-data-sample.png" width="90%"/>
+
+<sub>Hierarchical breakdown of covered mathematical topics in DeepMath-103K.</sub>
+</div>
+
+**Data Sample**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics, ensuring comprehensive topical exposure for models.
