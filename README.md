@@ -1,6 +1,6 @@
 <div align="center">
 
-# DeepMath
+# _DeepMath_
 
 <div>
 🗄️ A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for Advancing Reasoning
