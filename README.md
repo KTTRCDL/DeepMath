@@ -80,7 +80,7 @@ We are currently training the `DeepMath-Zero-7B` and `DeepMath-1.5B` models usin
 |  R1-Distill-Qwen-1.5B   |   84.7   |   72.0   |      53.1      |     36.6     |   29.4   |   24.8   |
 | DeepScaleR-1.5B-Preview | **89.4** |   80.3   |    **60.9**    |   **42.2**   | **42.3** |   29.6   |
 |  Still-3-1.5B-Preview   |   86.6   |   75.8   |      55.7      |     38.7     |   30.8   |   24.6   |
-|   DeepMath-Zero-1.5B    |   89.0   | **81.6** |      60.1      |     40.6     |   39.8   | **30.8** |
+|   DeepMath-1.5B    |   89.0   | **81.6** |      60.1      |     40.6     |   39.8   | **30.8** |
 
 
 ## 🎯Quick Start
