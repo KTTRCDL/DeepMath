@@ -24,7 +24,7 @@
 - **April 14, 2025**: We release **`DeepMath-103K`**, a large-scale dataset featuring challenging, verifiable, and decontaminated math problems tailored for RL and SFT. We open source:
   - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
   - 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
-  - 📝 Paper detailing data curation: [`arXiv:xxxx.xxxxx`](https://www.google.com/search?q=[https://arxiv.org/abs/xxxx.xxxxx](https://arxiv.org/abs/xxxx.xxxxx))
+  - 📝 Paper detailing data curation: [`arXiv:xxxx.xxxxx`](https://www.google.com/search?q=[https://arxiv.org/abs/xxxx.xxxxx](https://github.com/zwhe99/DeepMath/blob/main/deepmath-103k-report.pdf))
   - *(Coming Soon)*: Model weights trained on DeepMath-103K.
 
 
