@@ -68,12 +68,12 @@
 We are currently training the `DeepMath-Zero-7B` and `DeepMath-1.5B` models using the `DeepMath-103K` dataset. These models are initialized from `Qwen2.5-7B-Base` and `R1-Distill-Qwen-1.5B`, respectively. The training process is ongoing.
 
 
-|          Model           | MATH 500 |  AMC23   | Olympiad Bench | Miverva Math | AIME24 |  AIME25  |
-| :----------------------: | :------: | :------: | :------------: | :----------: | :----: | :------: |
-|     Qwen2.5-7B-Base      |   54.8   |   35.3   |      27.8      |     16.2     |  7.7   |   5.4    |
-|  Open-Reasoner-Zero-7B   |   81.8   |   58.9   |      47.9      |     38.4     |  15.6  |   14.4   |
-| Qwen-2.5-7B-SimpleRL-Zoo |   77.0   |   55.8   |      41.0      |     41.2     |  15.6  |   8.7    |
-|     DeepMath-Zero-7B     | **85.5** | **64.7** |    **51.0**    |   **45.3**   | 20.4** | **17.5** |
+|          Model           | MATH 500 |  AMC23   | Olympiad Bench | Miverva Math |  AIME24  |  AIME25  |
+| :----------------------: | :------: | :------: | :------------: | :----------: | :------: | :------: |
+|     Qwen2.5-7B-Base      |   54.8   |   35.3   |      27.8      |     16.2     |   7.7    |   5.4    |
+|  Open-Reasoner-Zero-7B   |   81.8   |   58.9   |      47.9      |     38.4     |   15.6   |   14.4   |
+| Qwen-2.5-7B-SimpleRL-Zoo |   77.0   |   55.8   |      41.0      |     41.2     |   15.6   |   8.7    |
+|     DeepMath-Zero-7B     | **85.5** | **64.7** |    **51.0**    |   **45.3**   | **20.4** | **17.5** |
 
 |          Model          | MATH 500 |  AMC23   | Olympiad Bench | Miverva Math |  AIME24  |  AIME25  |
 | :---------------------: | :------: | :------: | :------------: | :----------: | :------: | :------: |
