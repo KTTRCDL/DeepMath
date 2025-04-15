@@ -118,3 +118,26 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VL
     --top_p 0.95 \
     --n 16
 ```
+
+
+
+#### Training
+
+* Data Preparation
+
+  ```shell
+  DATA_DIR=/path/to/your/data
+  python3 verl/examples/data_preprocess/deepmath_103k.py --local_dir $DATA_DIR
+  ```
+
+* Start Ray
+
+  ```shell
+  # Head node (×1)
+  ray start  --head --port=6379  --node-ip-address=$HEAD_ADDR --num-gpus=8
+  
+  # Worker nodes (×7)
+  ray start  --address=$HEAD_ADDR:6379 --node-ip-address=$WORKER_ADDR --num-gpus=8
+  ```
+
+* Launch training at head node. See `scripts/train` for training scripts.
