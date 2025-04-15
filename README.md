@@ -65,7 +65,7 @@
 
 ## 📊Main Results
 
-We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` dataset, starting from `Qwen2.5-7B-Base` via the zero RL method. Training is still in progress.
+We are currently training the `DeepMath-Zero-7B` and `DeepMath-1.5B` models using the `DeepMath-103K` dataset. These models are initialized from `Qwen2.5-7B-Base` and `R1-Distill-Qwen-1.5B`, respectively. The training process is ongoing.
 
 
 |          Model           | MATH 500 |  AMC23   | Miverva Math | Olympiad Bench |  AIME24  |  AIME25  |
@@ -75,6 +75,12 @@ We are currently cooking the `DeepMath-Zero-7B` model using the `DeepMath-103K` 
 | Qwen-2.5-7B-SimpleRL-Zoo |   77.0   |   55.8   |     41.2     |      41.0      |   15.6   |   8.7    |
 |     DeepMath-Zero-7B     | **85.5** | **64.7** |   **45.3**   |    **51.0**    | **20.4** | **17.5** |
 
+|          Model          | MATH 500 |  AMC23   | Miverva Math | Olympiad Bench |  AIME24  |  AIME25  |
+| :---------------------: | :------: | :------: | :----------: | :------------: | :------: | :------: |
+|  R1-Distill-Qwen-1.5B   |   84.7   |   72.0   |     36.6     |      53.1      |   29.4   |   24.8   |
+| DeepScaleR-1.5B-Preview | **89.4** |   80.3   |   **42.2**   |    **60.9**    | **42.3** |   29.6   |
+|  Still-3-1.5B-Preview   |   86.6   |   75.8   |     38.7     |      55.7      |   30.8   |   24.6   |
+|   DeepMath-Zero-1.5B    |   89.0   | **81.6** |     40.6     |      60.1      |   39.8   | **30.8** |
 
 
 ## 🎯Quick Start
