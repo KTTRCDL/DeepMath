@@ -3,7 +3,7 @@
 # DeepMath
 
 <div>
-🗄️ A Large-Scale, Challenging, Verifiable, and Decontaminated Mathematical Dataset for Advancing Reasoning
+🗄️ A Large-Scale, Challenging, Decontaminated, and Verifiable Mathematical Dataset for Advancing Reasoning
 </div>
 </div>
 
