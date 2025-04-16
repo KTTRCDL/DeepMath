@@ -15,7 +15,7 @@
 [![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
 [![Github](https://img.shields.io/badge/Code-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/zwhe99/DeepMath)
 [![GitHub Stars](https://img.shields.io/github/stars/zwhe99/DeepMath?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=000000)](https://github.com/zwhe99/DeepMath)
-[![arXiv](https://img.shields.io/badge/arXiv-1234.56789-b31b1b.svg?style=for-the-badge)](https://github.com/zwhe99/DeepMath/blob/main/deepmath-103k-report.pdf)
+[![arXiv](https://img.shields.io/badge/arXiv-2504.11456-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2504.11456)
 </div>
 </div>
 
@@ -24,7 +24,7 @@
 - **April 14, 2025**: We release **`DeepMath-103K`**, a large-scale dataset featuring challenging, verifiable, and decontaminated math problems tailored for RL and SFT. We open source:
   - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
   - 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
-  - 📝 Paper detailing data curation: [`arXiv:xxxx.xxxxx`](https://github.com/zwhe99/DeepMath/blob/main/deepmath-103k-report.pdf)
+  - 📝 Paper detailing data curation: [`arXiv:2504.11456`](https://arxiv.org/abs/2504.11456)
   - *(Coming Soon)*: Model weights trained on DeepMath-103K.
 
 
@@ -147,6 +147,10 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VL
 @article{deepmath,
   title={DeepMath-103K: A Large-Scale, Challenging, Decontaminated, and  Verifiable Mathematical Dataset for Advancing Reasoning},
   author={He, Zhiwei and Liang, Tian and Xu, Jiahao and Liu, Qiuzhi and Chen, Xingyu and Wang, Yue and Song, Linfeng and Yu, Dian and Liang, Zhenwen and Wang, Wenxuan and Zhang, Zhuosheng and Wang, Rui and Tu, Zhaopeng and Mi, Haitao and Yu, Dong and others},
-  year={2025}
+  year={2025},
+  eprint={2504.11456},
+  archivePrefix={arXiv},
+  primaryClass={cs.CL},
+  url={https://arxiv.org/abs/2504.11456}, 
 }
 ```
