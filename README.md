@@ -142,6 +142,19 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VL
 
 * Launch training at head node. See `scripts/train` for training scripts.
 
+
+
+## 🙏 Acknowledgements
+
+This work can not be done without the help of the following works:
+
+- **[verl](https://github.com/volcengine/verl)**: A very fast reinforcement learning framework.
+- **[Vivacem/MMIQC](https://huggingface.co/datasets/Vivacem/MMIQC)**: A mixture of question-response pairs extracted from Mathematics Stack Exchange pages.
+- **[TIGER-Lab/WebInstructSub](https://huggingface.co/datasets/TIGER-Lab/WebInstructSub)**: Instruction data from MathStackExchange and ScienceStackExchange.
+- **[AI-MO/NuminaMath-CoT](https://huggingface.co/datasets/AI-MO/NuminaMath-CoT)**: Approximately 860k math problems.
+
+
+
 ## 📚 Citation
 ```bibtex
 @article{deepmath,
