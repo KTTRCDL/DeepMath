@@ -23,10 +23,9 @@
 
 - **April 14, 2025**: We release **`DeepMath-103K`**, a large-scale dataset featuring challenging, verifiable, and decontaminated math problems tailored for RL and SFT. We open source:
   - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
+  - 🤗 Model weights: [`DeepMath-Zero-7B`](https://huggingface.co/zwhe99/DeepMath-Zero-7B), [`DeepMath-1.5B`](https://huggingface.co/zwhe99/DeepMath-1.5B)
   - 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
   - 📝 Paper detailing data curation: [`arXiv:2504.11456`](https://arxiv.org/abs/2504.11456)
-  - *(Coming Soon)*: Model weights trained on DeepMath-103K.
-
 
 
 ## 📖 Overview
@@ -78,9 +77,9 @@ We are currently training the `DeepMath-Zero-7B` and `DeepMath-1.5B` models usin
 |          Model          | MATH 500 |  AMC23   | Olympiad Bench | Miverva Math |  AIME24  |  AIME25  |
 | :---------------------: | :------: | :------: | :------------: | :----------: | :------: | :------: |
 |  R1-Distill-Qwen-1.5B   |   84.7   |   72.0   |      53.1      |     36.6     |   29.4   |   24.8   |
-| DeepScaleR-1.5B-Preview | **89.4** |   80.3   |    **60.9**    |   **42.2**   | **42.3** |   29.6   |
+| DeepScaleR-1.5B-Preview |   89.4   |   80.3   |      60.9      |     42.2     | **42.3** |   29.6   |
 |  Still-3-1.5B-Preview   |   86.6   |   75.8   |      55.7      |     38.7     |   30.8   |   24.6   |
-|   DeepMath-1.5B    |   89.0   | **81.6** |      60.1      |     40.6     |   39.8   | **30.8** |
+|   DeepMath-1.5B         | **89.9** | **82.3** |    **61.8**    |   **42.5**   |   37.3   | **30.8** |
 
 
 ## 🎯Quick Start
