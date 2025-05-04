@@ -65,7 +65,7 @@
 
 ## 📊Main Results
 
-We are currently training the `DeepMath-Zero-7B` and `DeepMath-1.5B` models using the `DeepMath-103K` dataset. These models are initialized from `Qwen2.5-7B-Base` and `R1-Distill-Qwen-1.5B`, respectively. The training process is ongoing.
+`DeepMath-Zero-7B` and `DeepMath-1.5B` are trained on the `DeepMath-103K` dataset via RL. These models are initialized from `Qwen2.5-7B-Base` and `R1-Distill-Qwen-1.5B`, respectively.
 
 
 |          Model           | MATH 500 |  AMC23   | Olympiad Bench | Minerva Math |  AIME24  |  AIME25  |
