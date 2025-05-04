@@ -98,4 +98,4 @@ ray job submit --address="http://127.0.0.1:8265" \
     trainer.save_rollout=True \
     trainer.test_freq=-1 \
     trainer.total_epochs=999999 \
-    trainer.total_training_steps=1750 2>&1 | tee -a $MODEL_DIR/$RUN_NAME/train.log
+    trainer.total_training_steps=1800 2>&1 | tee -a $MODEL_DIR/$RUN_NAME/train.log
