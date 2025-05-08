@@ -21,7 +21,7 @@
 </div>
 
 ## 🔥 News
-- **May 8, 2025**: We found that 48 sample contained hints that revealed the answers. The relevant questions have now been revised to remove the leaked answers.
+- **May 8, 2025**: We found that 48 samples contained hints that revealed the answers. The relevant questions have now been revised to remove the leaked answers.
 - **April 14, 2025**: We release **`DeepMath-103K`**, a large-scale dataset featuring challenging, verifiable, and decontaminated math problems tailored for RL and SFT. We open source:
   - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
   - 🤗 Model weights: [`DeepMath-Zero-7B`](https://huggingface.co/zwhe99/DeepMath-Zero-7B), [`DeepMath-1.5B`](https://huggingface.co/zwhe99/DeepMath-1.5B)
