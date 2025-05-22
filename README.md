@@ -39,22 +39,23 @@
 
 <sub>Difficulty distribution comparison.</sub> </div>
 
-**2. Broad Topical Diversity**: The dataset spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
+**2. Data Diversity and Novelty**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
 
 <div align="center"> <img src="./assets/github-domain.png" width="50%"/>
-
 <sub>Hierarchical breakdown of mathematical topics covered in DeepMath-103K.</sub></div>
 
-**3. Rigorous Decontamination**: Built from diverse sources, the dataset underwent meticulous decontamination against common benchmarks using semantic matching. This minimizes test set leakage and promotes fair model evaluation.
+The problems in DeepMath-103K are novel and unique, whereas many existing datasets are similar and overlap.
+<div align="center"> <img src="./assets/github-tsne.png" width="70%"/>
+<sub>Embedding distributions of different datasets.</sub></div>
+
+**3. Rigorous Decontamination**: Built from diverse sources, DeepMath-103K underwent meticulous decontamination against common benchmarks using semantic matching. This minimizes test set leakage and promotes fair model evaluation.
 
 <div align="center"> <img src="./assets/github-contamination-case.png" width="80%"/>
-
 <sub>Detected contamination examples. Subtle conceptual overlaps can also be identified.</sub> </div>
 
-**4. Rich Data Format**: Each sample in `DeepMath-103K` is structured with rich information to support various research applications:
+**4. Rich Data Format**: Each sample in DeepMath-103K is structured with rich information to support various research applications:
 
 <div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
-
 <sub>An example data sample from DeepMath-103K.</sub> </div>
 
 - **Question**: The mathematical problem statement.
@@ -65,22 +66,10 @@
 
 ## 📊Main Results
 
-`DeepMath-Zero-7B` and `DeepMath-1.5B` are trained on the `DeepMath-103K` dataset via RL. These models are initialized from `Qwen2.5-7B-Base` and `R1-Distill-Qwen-1.5B`, respectively.
+DeepMath serise models achieve many **SOTA** results on challenging math benchmark:
 
-
-|          Model           | MATH 500 |  AMC23   | Olympiad Bench | Minerva Math |  AIME24  |  AIME25  |
-| :----------------------: | :------: | :------: | :------------: | :----------: | :------: | :------: |
-|     Qwen2.5-7B-Base      |   54.8   |   35.3   |      27.8      |     16.2     |   7.7    |   5.4    |
-|  Open-Reasoner-Zero-7B   |   81.8   |   58.9   |      47.9      |     38.4     |   15.6   |   14.4   |
-| Qwen-2.5-7B-SimpleRL-Zoo |   77.0   |   55.8   |      41.0      |     41.2     |   15.6   |   8.7    |
-|     [DeepMath-Zero-7B](https://huggingface.co/zwhe99/DeepMath-Zero-7B)     | **85.5** | **64.7** |    **51.0**    |   **45.3**   | **20.4** | **17.5** |
-
-|          Model          | MATH 500 |  AMC23   | Olympiad Bench | Minerva Math |  AIME24  |  AIME25  |
-| :---------------------: | :------: | :------: | :------------: | :----------: | :------: | :------: |
-|  R1-Distill-Qwen-1.5B   |   84.7   |   72.0   |      53.1      |     36.6     |   29.4   |   24.8   |
-| DeepScaleR-1.5B-Preview |   89.4   |   80.3   |      60.9      |     42.2     | **42.3** |   29.6   |
-|  Still-3-1.5B-Preview   |   86.6   |   75.8   |      55.7      |     38.7     |   30.8   |   24.6   |
-|   [DeepMath-1.5B](https://huggingface.co/zwhe99/DeepMath-1.5B)         | **89.9** | **82.3** |    **61.8**    |   **42.5**   |   37.3   | **30.8** |
+<div align="center"> <img src="./assets/github-main.png" width="90%"/>
+<sub>Math reasoning performance.</sub> </div>
 
 
 ## 🎯Quick Start
