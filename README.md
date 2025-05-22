@@ -42,20 +42,24 @@
 **2. Data Diversity and Novelty**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
 
 <div align="center"> <img src="./assets/github-domain.png" width="50%"/>
+  
 <sub>Hierarchical breakdown of mathematical topics covered in DeepMath-103K.</sub></div>
 
 The problems in DeepMath-103K are novel and unique, whereas many existing datasets are similar and overlap.
 <div align="center"> <img src="./assets/github-tsne.png" width="70%"/>
+
 <sub>Embedding distributions of different datasets.</sub></div>
 
 **3. Rigorous Decontamination**: Built from diverse sources, DeepMath-103K underwent meticulous decontamination against common benchmarks using semantic matching. This minimizes test set leakage and promotes fair model evaluation.
 
 <div align="center"> <img src="./assets/github-contamination-case.png" width="80%"/>
+
 <sub>Detected contamination examples. Subtle conceptual overlaps can also be identified.</sub> </div>
 
 **4. Rich Data Format**: Each sample in DeepMath-103K is structured with rich information to support various research applications:
 
 <div align="center"> <img src="./assets/github-data-sample.png" width="90%"/>
+
 <sub>An example data sample from DeepMath-103K.</sub> </div>
 
 - **Question**: The mathematical problem statement.
@@ -69,6 +73,7 @@ The problems in DeepMath-103K are novel and unique, whereas many existing datase
 DeepMath serise models achieve many **SOTA** results on challenging math benchmark:
 
 <div align="center"> <img src="./assets/github-main.png" width="90%"/>
+
 <sub>Math reasoning performance.</sub> </div>
 
 
