@@ -23,10 +23,13 @@
 ## 🔥 News
 - **May 8, 2025**: We found that 48 samples contained hints that revealed the answers. The relevant questions have now been revised to remove the leaked answers.
 - **April 14, 2025**: We release **`DeepMath-103K`**, a large-scale dataset featuring challenging, verifiable, and decontaminated math problems tailored for RL and SFT. We open source:
-  - 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
-  - 🤗 Model weights: [`DeepMath-Zero-7B`](https://huggingface.co/zwhe99/DeepMath-Zero-7B), [`DeepMath-1.5B`](https://huggingface.co/zwhe99/DeepMath-1.5B)
-  - 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
-  - 📝 Paper detailing data curation: [`arXiv:2504.11456`](https://arxiv.org/abs/2504.11456)
+
+## 📦 Resource
+
+- 🤗 Training data: [`DeepMath-103K`](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
+- 🤗 Model weights: [`DeepMath-Zero-7B`](https://huggingface.co/zwhe99/DeepMath-Zero-7B), [`DeepMath-Zero-Math-7B`](https://huggingface.co/zwhe99/DeepMath-Zero-Math-7B), [`DeepMath-1.5B`](https://huggingface.co/zwhe99/DeepMath-1.5B),  [`DeepMath-Omn-1.5B`](https://huggingface.co/zwhe99/DeepMath-Omn-1.5B)
+- 💻 Code: [`DeepMath`](https://github.com/zwhe99/DeepMath)
+- 📝 Paper: [`arXiv:2504.11456`](https://arxiv.org/abs/2504.11456)
 
 
 ## 📖 Overview
@@ -42,7 +45,7 @@
 **2. Data Diversity and Novelty**: DeepMath-103K spans a wide spectrum of mathematical subjects, including Algebra, Calculus, Number Theory, Geometry, Probability, and Discrete Mathematics.
 
 <div align="center"> <img src="./assets/github-domain.png" width="50%"/>
-  
+
 <sub>Hierarchical breakdown of mathematical topics covered in DeepMath-103K.</sub></div>
 
 The problems in DeepMath-103K are novel and unique, whereas many existing datasets are similar and overlap.
@@ -70,7 +73,7 @@ The problems in DeepMath-103K are novel and unique, whereas many existing datase
 
 ## 📊Main Results
 
-DeepMath serise models achieve many **SOTA** results on challenging math benchmark:
+DeepMath serise models achieve many **SOTA** results on challenging math benchmarks:
 
 <div align="center"> <img src="./assets/github-main.png" width="90%"/>
 
