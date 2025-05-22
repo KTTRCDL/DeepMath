@@ -75,7 +75,7 @@ The problems in DeepMath-103K are novel and unique, whereas many existing datase
 
 DeepMath serise models achieve many **SOTA** results on challenging math benchmarks:
 
-<div align="center"> <img src="./assets/github-main.png" width="600"/>
+<div align="center"> <img src="./assets/github-main.png" width="100%"/>
 
 <sub>Math reasoning performance.</sub> </div>
 
