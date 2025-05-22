@@ -133,7 +133,7 @@ VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VL
   # Head node (×1)
   ray start  --head --port=6379  --node-ip-address=$HEAD_ADDR --num-gpus=8
   
-  # Worker nodes (×7)
+  # Worker nodes (×7 or ×11)
   ray start  --address=$HEAD_ADDR:6379 --node-ip-address=$WORKER_ADDR --num-gpus=8
   ```
 
