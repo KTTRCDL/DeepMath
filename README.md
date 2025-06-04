@@ -94,6 +94,7 @@ pip3 install flash-attn==2.7.4.post1 --no-build-isolation
 pip3 install omegaconf==2.4.0.dev3 hydra-core==1.4.0.dev1 antlr4-python3-runtime==4.11.0 vllm==0.7.3
 pip3 install math-verify[antlr4_11_0]==0.7.0 fire deepspeed tensorboardX prettytable datasets transformers==4.49.0
 pip3 install -e verl
+pip3 install langdetect==1.0.9 pebble==5.1.0 word2number
 ```
 
 

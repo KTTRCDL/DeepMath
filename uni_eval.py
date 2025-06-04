@@ -8,7 +8,7 @@ import sympy as sp
 from tqdm import tqdm
 from copy import deepcopy
 from transformers import AutoTokenizer
-from datasets import load_dataset, load_from_disk
+from datasets import load_dataset, load_from_disk, ClassLabel
 
 from vllm import LLM, SamplingParams
 from math_verify import verify, parse
@@ -17,6 +17,7 @@ from sympy import simplify, Eq, sympify, Pow
 from sympy.parsing.latex import parse_latex
 
 from utils.openmathinst_utils import process_results
+from utils.polymath.judge import pm_judge
 from utils.data_utils import write_jsonl, write_json, read_jsonl
 from utils.chat_template import CHAT_TEMPLATE, SYSTEM_PROMPT, PREFIX_PROMPT, SUFFIX_PROMPT
 
@@ -52,11 +53,17 @@ DATASET_INFO = {
         "problem_key": "question",
         "answer_key": "final_answer",
     },
-    "RUC-AIBOX/OlymMATH": {
-        "default_subset": "en-easy",
+    "zwhe99/gpqa_diamond_mc": {
         "default_split": "test",
         "problem_key": "problem",
+        "answer_key": "solution",
+        "category_keys": ["domain"]
+    },
+    "zwhe99/pm-en": {
+        "default_split": "test",
+        "problem_key": "question",
         "answer_key": "answer",
+        "category_keys": ["level"]
     }
 }
 
@@ -419,10 +426,24 @@ def pass_at_k(correct_lst: list[bool], k: int) -> float:
             log_ratio += math.log(num_samples - num_correct - i) - math.log(num_samples - i)
         return 1.0 - math.exp(log_ratio)
 
+def bulid_choice_prompt(question: str, choices: list[str]):
+    prompt = f"{question}\n\n\n"
+    options = [chr(65 + i) for i in range(len(choices))]
+    for option, choice in zip(options, choices):
+        prompt += f"({option}) {choice}\n"
+
+    prompt += "\nPlease write your final answer in the form of "
+    for oid, opt in enumerate(options):
+        if oid != len(options) - 1:
+            prompt += f"\\boxed{{{opt}}}, "
+        else:
+            prompt += f"or \\boxed{{{opt}}}"
+    return prompt
+
 def eval(
     # required
     base_model: str = None,
-    chat_template_name: str = None,
+    chat_template_name: str = "default",
     system_prompt_name: str = "disabled",
     prefix_prompt_name: str = "disabled",
     suffix_prompt_name: str = "disabled",
@@ -440,6 +461,8 @@ def eval(
     data_id: str = None,
     split: str = None,
     subset: str = None,
+    start_idx: int = None,
+    end_idx: int = None,
 
     # gen
     max_model_len: int = 32768,
@@ -458,6 +481,11 @@ def eval(
     result_file = os.path.join(output_dir, "result.log")
     config_file = os.path.join(output_dir, "config.json")
 
+    # Sanity check
+    assert not (start_idx is not None and end_idx is None or start_idx is None and end_idx is not None), "start_idx and end_idx must be provided together"
+    if start_idx is not None and end_idx is not None:
+        assert end_idx > start_idx, "end_idx must be greater than start_idx"
+
     if isinstance(split, int):
         split = str(split)
 
@@ -467,6 +495,7 @@ def eval(
     # Get dataset info
     problem_key = DATASET_INFO[data_id]["problem_key"]
     answer_key = DATASET_INFO[data_id]["answer_key"]
+    choice_key = DATASET_INFO[data_id]["choice_key"] if "choice_key" in DATASET_INFO[data_id] else None
 
     # load model
     llm = LLM(
@@ -478,7 +507,7 @@ def eval(
         enforce_eager=enforce_eager,
     )
     tokenizer = AutoTokenizer.from_pretrained(base_model)
-    if chat_template_name is not None:
+    if chat_template_name is not None and chat_template_name != "default":
         tokenizer.chat_template = CHAT_TEMPLATE[chat_template_name]
 
     # Load data
@@ -501,6 +530,9 @@ def eval(
 
     test_dataset = test_dataset[split]
 
+    if start_idx is not None and end_idx is not None:
+        test_dataset = test_dataset.select(range(start_idx, end_idx))
+
     system_message = []
     if system_prompt_name != "disabled":
         system_message = [{"role": "system", "content": SYSTEM_PROMPT[system_prompt_name]}]
@@ -518,7 +550,7 @@ def eval(
             conversation=system_message + [
                 {
                     "role": "user",
-                    "content": prefix_prompt + td[problem_key] + suffix_prompt
+                    "content": prefix_prompt + td[problem_key] if not choice_key else bulid_choice_prompt(td[problem_key], td[choice_key]) + suffix_prompt
                 }
             ],
             tokenize=False,
@@ -532,7 +564,7 @@ def eval(
             conversation=system_message + [
                 {
                     "role": "user",
-                    "content": td[problem_key]
+                    "content": prefix_prompt + td[problem_key] if not choice_key else bulid_choice_prompt(td[problem_key], td[choice_key]) + suffix_prompt
                 }
             ],
             tokenize=True,
@@ -585,11 +617,14 @@ def eval(
     ks = [k for k in ks if (2 * k) <= n or k == 1]
     for g in tqdm(generations, desc="computing correctness", total=len(generations)):
         gt_answer = g[answer_key]
-        if isinstance(gt_answer, list):
-            assert len(gt_answer) == 1, "gt_answer must be a single string"
-            gt_answer = str(gt_answer[0])
+        if isinstance(test_dataset.features[answer_key], ClassLabel):
+            gt_answer = test_dataset.features[answer_key].int2str(gt_answer)
         else:
-            gt_answer = str(gt_answer)
+            if isinstance(gt_answer, list):
+                assert len(gt_answer) == 1, "gt_answer must be a single string"
+                gt_answer = str(gt_answer[0])
+            else:
+                gt_answer = str(gt_answer)
 
         if data_id == "zwhe99/simplerl-OlympiadBench":
             # Note: Olympiadbench has its offical judge which do not support duplicated `boxed` in the response.
@@ -610,6 +645,24 @@ def eval(
                     ) or
                     verify(parse(f"\\boxed{{${gt_answer}}}$"), parse(resp))
                     or scorer.judge(gt_answer, resp if "</think>" not in resp else resp.split("</think>")[1].strip(), 1e-8)
+                ) for resp in g["response"]
+            ]
+        elif data_id == "zwhe99/pm-en":
+            g["correct"] = [
+                (
+                    process_results(
+                        resp,
+                        gt_answer,
+                        response_extract_from_boxed=True,
+                    ) or
+                    process_results(
+                        resp,
+                        gt_answer,
+                        response_extract_from_boxed=False,
+                        response_extract_regex=r"The answer is: (.+)$",
+                    ) or
+                    verify(parse(f"\\boxed{{${gt_answer}}}$"), parse(resp))
+                    or pm_judge(resp, gt_answer)
                 ) for resp in g["response"]
             ]
         else:
