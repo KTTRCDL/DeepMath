@@ -101,34 +101,44 @@ pip3 install langdetect==1.0.9 pebble==5.1.0 word2number
 
 #### Evaluation
 
-We use different system prompt for different models. Adjust `--system_prompt_name` according to the following table:
+* Example eval script for DeepMath-Zero-7B:
 
-| Model                 | System Prompt Name |
-| --------------------- | ------------------ |
-| DeepMath-Zero-7B      | simplerl           |
-| DeepMath-Zero-Math-7B | simplerl           |
-| DeepMath-1.5B         | disabled           |
-| DeepMath-Omn-1.5B     | disabled           |
+  ```shell
+  VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VLLM_WORKER_MULTIPROC_METHOD=spawn python3 uni_eval.py \
+      --base_model zwhe99/DeepMath-Zero-7B \
+      --chat_template_name default \
+      --system_prompt_name simplerl \
+      --output_dir  \
+      --bf16 True \
+      --tensor_parallel_size 8 \
+      --data_id zwhe99/MATH \
+      --split math500 \
+      --max_model_len 32768 \
+      --temperature 0.6 \
+      --top_p 0.95 \
+      --n 16
+  ```
 
+* We use different system prompt for different models. Adjust `--system_prompt_name` according to the following table:
 
+  | Model                 | `--system_prompt_name` |
+  | --------------------- | ---------------------- |
+  | DeepMath-Zero-7B      | simplerl               |
+  | DeepMath-Zero-Math-7B | simplerl               |
+  | DeepMath-1.5B         | disabled               |
+  | DeepMath-Omn-1.5B     | disabled               |
 
-Example eval script for DeepMath-Zero-7B:
+* Adjust `--data_id` and `--split` for different datasets:
 
-```shell
-VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VLLM_WORKER_MULTIPROC_METHOD=spawn python3 uni_eval.py \
-    --base_model zwhe99/DeepMath-Zero-7B \
-    --chat_template_name default \
-    --system_prompt_name simplerl \
-    --output_dir  \
-    --bf16 True \
-    --tensor_parallel_size 8 \
-    --data_id zwhe99/MATH \
-    --split math500 \
-    --max_model_len 32768 \
-    --temperature 0.6 \
-    --top_p 0.95 \
-    --n 16
-```
+  | Dataset       | `--data_id`                   | `--split` |
+  | ------------- | ----------------------------- | --------- |
+  | MATH500       | zwhe99/MATH                   | math500   |
+  | AMC23         | zwhe99/amc23                  | test      |
+  | OlympiadBench | zwhe99/simplerl-OlympiadBench | test      |
+  | MinervaMath   | zwhe99/simplerl-minerva-math  | test      |
+  | AIME24        | zwhe99/aime90                 | 2024      |
+  | AIME25        | math-ai/aime25                | test      |
+  | PolyMath      | zwhe99/pm-en                  | test      |
 
 
 
