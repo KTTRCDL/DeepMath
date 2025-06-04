@@ -100,7 +100,7 @@ pip3 install -e verl
 
 #### Evaluation
 
-We use different system promot for different models. Adjust `--system_prompt_name` according to the following table:
+We use different system prompt for different models. Adjust `--system_prompt_name` according to the following table:
 
 | Model                 | System Prompt Name |
 | --------------------- | ------------------ |
