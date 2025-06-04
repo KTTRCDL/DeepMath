@@ -100,10 +100,23 @@ pip3 install -e verl
 
 #### Evaluation
 
+We use different system promot for different models. Adjust `--system_prompt_name` according to the following table:
+
+| Model                 | System Prompt Name |
+| --------------------- | ------------------ |
+| DeepMath-Zero-7B      | simplerl           |
+| DeepMath-Zero-Math-7B | simplerl           |
+| DeepMath-1.5B         | disabled           |
+| DeepMath-Omn-1.5B     | disabled           |
+
+
+
+Example eval script for DeepMath-Zero-7B:
+
 ```shell
 VLLM_ALLOW_LONG_MAX_MODEL_LEN=1 VLLM_ATTENTION_BACKEND=XFORMERS VLLM_USE_V1=1 VLLM_WORKER_MULTIPROC_METHOD=spawn python3 uni_eval.py \
     --base_model zwhe99/DeepMath-Zero-7B \
-    --chat_template_name orz \
+    --chat_template_name default \
     --system_prompt_name simplerl \
     --output_dir  \
     --bf16 True \
