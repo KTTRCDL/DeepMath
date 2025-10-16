@@ -1,0 +1,14 @@
+To activate this environment, use:
+
+    mamba activate deepmath
+
+Or to execute a single command in this environment, use:
+
+    mamba run -n deepmath mycommand
+
+
+
+srun -p debug -N 1 -n 1 --cpus-per-task=8 --gres=gpu:1 --pty bash
+
+module load cuda/12.4 && 
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple flash-attn==2.7.4.post1 --no-build-isolation
