@@ -4,7 +4,7 @@ set -u
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 WORK_DIR=$SCRIPT_DIR/../..
 MODEL_DIR=$WORK_DIR/models
-DATA_DIR=/path/to/your/data
+DATA_DIR=/hpc2hdd/home/xli026/data/DeepMath-103k
 RUN_NAME=deepmath-1.5b
 mkdir -p $MODEL_DIR/$RUN_NAME
 
@@ -31,7 +31,7 @@ ray job submit --address="http://127.0.0.1:8265" \
         "NCCL_PXN_DISABLE": "1",
         "GLOO_SOCKET_IFNAME": "bond1",
         "VLLM_ATTENTION_BACKEND": "XFORMERS",
-        "PYTHONUNBUFFERED": "1",
+        "PYTHONUNBUFFERED": "1"
     },
     "pip": ["word2number", "timeout_decorator"]
     }' -- PYTHONUNBUFFERED=1 python3 -m verl.trainer.main_ppo \

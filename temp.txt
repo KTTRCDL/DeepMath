@@ -10,5 +10,46 @@ Or to execute a single command in this environment, use:
 
 srun -p debug -N 1 -n 1 --cpus-per-task=8 --gres=gpu:1 --pty bash
 
+sbatch slurm.sh
+
 module load cuda/12.4 && 
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple flash-attn==2.7.4.post1 --no-build-isolation
+
+
+For debug
+
+import debugpy
+import socket
+import logging
+
+def setup_remote_debugging(port: int = 5678):
+
+    ip = socket.gethostbyname(socket.gethostname())
+    logging.info(f"Initializing remote debugging at {ip}:{port}")
+    print(f"Initializing remote debugging at {ip}:{port}")
+
+    debugpy.listen(address=(ip, port))
+    
+    debugpy.wait_for_client()    
+    logging.info(f"Debugger attached: {debugpy.is_client_connected()}")
+
+launch.json:
+{
+    "name": "Python program: Listen",
+    "type": "debugpy",
+    "request": "attach",
+    "connect": {
+    "host": "10.120.20.208",
+    "port":5678
+   },
+   "pathMappings": 
+   [
+        {
+            "localRoot": "/hpc2hdd/JH_DATA/share/zrao538/PrivateShareGroup/zrao538_NLPGroup/lijungang/Research_Works/Omni-Models-SAE/sae/scripts",
+            "remoteRoot": "."
+        }
+    ],
+   "justMyCode": false
+}
+
+python -m debugpy --listen 0.0.0.0:5678 --wait-for-client uni_eval_debug.py

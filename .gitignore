@@ -181,3 +181,6 @@ test*
 
 log*
 result*
+paper/
+outputs/
+data/
